@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Listar Pacientes</title>
+</head>
+<body>
+    <h1>Pacientes Cadastrados</h1>
+    <ul>
+        {% for patient in patients %}
+            <li>{{ patient.name }} - {{ patient.age }} anos</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'create_patient' %}">Cadastrar novo paciente</a>
+</body>
+</html>
