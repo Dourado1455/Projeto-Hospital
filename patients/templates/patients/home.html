@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+    <meta charset="UTF-8">
+    <title>Home - Hospital</title>
+    <link rel="stylesheet" href="{% static 'patients/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao Sistema de Hospital</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="{% url 'list_patients' %}">Listar Pacientes</a></li>
+            <li><a href="{% url 'list_doctors' %}">Listar Médicos</a></li>
+            <li><a href="{% url 'create_patient' %}">Cadastrar Paciente</a></li>
+            <li><a href="/admin">Acessar Admin</a></li>
+        </ul>
+    </nav>
+
+    <footer>
+        <p>© 2024 Hospital UNIDESC - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

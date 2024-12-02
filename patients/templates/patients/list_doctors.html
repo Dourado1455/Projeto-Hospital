@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Médicos</title>
+    <link rel="stylesheet" href="{% static 'patients/styles.css' %}">
+</head>
+<body>
+    <h1>Médicos Cadastrados</h1>
+    <ul>
+        {% for doctor in doctors %}
+            <li>
+                <strong>Nome:</strong> {{ doctor.name }} <br>
+                <strong>Especialidade:</strong> {{ doctor.specialty }} <br>
+                <strong>Telefone:</strong> {{ doctor.phone }} <br>
+                <strong>Email:</strong> {{ doctor.email }}
+            </li>
+            <hr>
+        {% endfor %}
+    </ul>
+    <a href="/">Voltar ao início</a>
+</body>
+</html>
